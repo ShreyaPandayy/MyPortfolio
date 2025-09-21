@@ -1,266 +1,269 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>My Website</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shreya Pandey — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- Header -->
-  <section id="header">
+
+  <!-- FIXED HEADER -->
+  <header id="header" aria-label="Main header">
     <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="#hero">
-            <h1><span>S</span>HREYA <span>P</span>ANDEY</h1>
-          </a>
+      <div class="brand">
+        <a href="#hero" aria-label="Home"><h1 class="site-title">SHREYA PANDEY</h1></a>
+      </div>
+
+      <nav class="nav-list" aria-label="Primary navigation">
+        <ul class="desktop" role="menubar" aria-hidden="false">
+          <li role="none"><a role="menuitem" href="#hero">Home</a></li>
+          <li role="none"><a role="menuitem" href="#services">Services</a></li>
+          <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
+          <li role="none"><a role="menuitem" href="#about">About</a></li>
+          <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+        </ul>
+
+        <ul class="mobile" aria-hidden="true">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+  <!-- END HEADER -->
+
+  <!-- HERO -->
+  <section id="hero" class="reveal" aria-label="Hero section">
+    <div class="hero-overlay"></div>
+    <div class="hero-inner container">
+      <div class="hero-left">
+        <h1>Hello,<br>My Name is <span>Shreya</span></h1>
+        <p>Frontend dev • AI & ML tinkerer • building performant web apps with polished UX.</p>
+        <div class="hero-ctas">
+          <a class="cta" href="#projects">Portfolio</a>
+          <a class="cta resume" href="https://drive.google.com/file/d/1ryZjT3eifuJqGaslwtkegrxhlaauiWy_/view?usp=drive_link" target="_blank" rel="noopener"><span>Download Resume</span></a>
         </div>
-        <div class="nav-list">
-          <div class="hamburger">
-            <div class="bar"></div>
+      </div>
+    </div>
+    <a class="scroll-hint" href="#services" aria-hidden="true">↓</a>
+  </section>
+
+    <!-- SERVICES -->
+  <section id="services" class="reveal">
+    <div class="services container">
+      <h2 class="section-title">My <span>Services</span></h2>
+      <div class="service-flex">
+        <div class="service-item">
+          <h3>Web Development</h3>
+          <p>I build modern, responsive, and user-friendly websites (React / Next.js / performance-first).</p>
+          <a class="service-btn" href="service.html?service=web-development">Learn More</a>
+        </div>
+
+        <div class="service-item">
+          <h3>AI & Machine Learning</h3>
+          <p>Developing intelligent solutions with ML models, data pipelines, and practical deployment.</p>
+          <a class="service-btn" href="service.html?service=ai-ml">Learn More</a>
+        </div>
+
+        <div class="service-item">
+          <h3>Full-Stack Development</h3>
+          <p>End-to-end apps: frontend, backend, auth, databases and deployment (Heroku/Vercel/AWS).</p>
+          <a class="service-btn" href="service.html?service=full-stack">Learn More</a>
+        </div>
+
+        <div class="service-item">
+          <h3>UI / UX Design</h3>
+          <p>Pixel-perfect UI, prototypes and user-centered design that convert and delight.</p>
+          <a class="service-btn" href="service.html?service=ui-ux">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROJECTS -->
+  <section id="projects" class="reveal">
+    <div class="projects container">
+      <div class="projects-header" style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+        <h2 class="section-title">Recent <span>Projects</span></h2>
+        <div style="margin-left:auto">
+          <!-- Add Project button -->
+          <button id="addProjectBtn" class="nav-pill" aria-haspopup="dialog">+ Add Project</button>
+        </div>
+      </div>
+
+      <div id="allProjects" class="all-projects">
+        <!-- ORIGINAL PROJECTS (kept) -->
+        <article class="project-item">
+          <div class="project-info">
+            <h3><a href="https://ai--content-generator.vercel.app/" target="_blank" rel="noopener">AI Content Generator</a></h3>
+            <h4>Next.js · React · Tailwind · Gemini API</h4>
+            <p>A web app that helps generate high-quality text content using modern LLM APIs and templates.</p>
           </div>
-          <ul>
-            <li><a href="#hero" data-after="Home">Home</a></li>
-            <li><a href="#services" data-after="Service">Services</a></li>
-            <li><a href="#projects" data-after="Projects">Projects</a></li>
-            <li><a href="#about" data-after="About">About</a></li>
-            <li><a href="#contact" data-after="Contact">Contact</a></li>
-          </ul>
-        </div>
+          <div class="project-img">
+            <img src="https://img.freepik.com/free-vector/chatbot-customer-support-flat-concept-with-people-chatting-with-virtual-assistant-online-vector-illustration_98292-8656.jpg" alt="AI Content Generator">
+          </div>
+        </article>
+
+        <article class="project-item">
+          <div class="project-info">
+            <h3><a href="https://loop-microsoft.vercel.app/" target="_blank" rel="noopener">Microsoft Loop Clone</a></h3>
+            <h4>React · Next.js · Clerk</h4>
+            <p>Collaborative workspace app with real-time editing and embeds.</p>
+          </div>
+          <div class="project-img">
+            <img src="https://img.freepik.com/free-vector/media-player-software-computer-application-geolocation-app-location-determination-function-male-implementor-programmer-cartoon-character_335657-1180.jpg" alt="Microsoft Loop Clone">
+          </div>
+        </article>
+
+        <article class="project-item">
+          <div class="project-info">
+            <h3><a href="https://real-time-chat-frontend-1.vercel.app/login" target="_blank" rel="noopener">Real-time Chat Application</a></h3>
+            <h4>Node.js · Socket.io · Firebase</h4>
+            <p>Realtime chat with group features, media sharing, and push notifications.</p>
+          </div>
+          <div class="project-img">
+            <img src="https://img.freepik.com/premium-photo/customer-experiencereviewfeedback-concepthands-using-mobile-phone_12892-102.jpg" alt="Real-time Chat">
+          </div>
+        </article>
+
+        <article class="project-item">
+          <div class="project-info">
+            <h3><a href="https://github.com/ShreyaPandayy/ai-resume-builder" target="_blank" rel="noopener">AI-Powered Resume Builder</a></h3>
+            <h4>Python · Flask · OpenAI</h4>
+            <p>AI-assisted resume generation with templates and export options.</p>
+          </div>
+          <div class="project-img">
+            <img src="https://img.freepik.com/premium-photo/person-holding-resume-front-laptop_31965-94858.jpg" alt="Resume Builder">
+          </div>
+        </article>
+
+        <article class="project-item">
+          <div class="project-info">
+            <h3><a href="https://github.com/ShreyaPandayy/ai-image-captioning" target="_blank" rel="noopener">AI-Based Image Captioning</a></h3>
+            <h4>Deep Learning · TensorFlow · Flask</h4>
+            <p>Uploads images and generates captions using trained CNN-LSTM models.</p>
+          </div>
+          <div class="project-img">
+            <img src="https://img.freepik.com/premium-photo/businessman-using-computer-generate-ai-chat-ai-data-analysis-data-online-network-artificial-intelligence_36325-5218.jpg" alt="Image Captioning">
+          </div>
+        </article>
       </div>
     </div>
   </section>
-  <!-- End Header -->
 
+  <!-- ADD PROJECT MODAL (hidden initially) -->
+  <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
+    <div class="modal-panel">
+      <header class="modal-header">
+        <h3 id="modalTitle">Add New Project</h3>
+        <button id="closeModal" class="modal-close" aria-label="Close">×</button>
+      </header>
 
-  <!-- Hero Section  -->
-  <section id="hero">
-    <div class="hero container">
-      <div>
-        <h1>Hello, <span></span></h1>
-        <h1>My Name is <span></span></h1>
-        <h1>Shreya <span></span></h1>
-        <a href="#projects" type="button" class="cta">Portfolio</a>
-      </div>
-    </div>
-  </section>
-  <!-- End Hero Section  -->
+      <form id="projectForm" class="modal-form" autocomplete="off">
+        <label>Project Name
+          <input id="projName" name="name" type="text" placeholder="e.g. My Cool App" required>
+        </label>
 
-  <!-- Services Section -->
-<section id="services">
-  <div class="services container">
-    <h1 class="section-title">My <span>Services</span></h1>
-    <div class="service-flex">
-      <div class="service-item">
-        <h2>Web Development</h2>
-        <p>I build modern, responsive, and user-friendly websites.</p>
-        <a href="https://www.geeksforgeeks.org/web-development-projects/#web-development-project-for-advanced-in-2025-source-code" class="service-btn">Learn More</a>
-      </div>
-      <div class="service-item">
-        <h2>AI & Machine Learning</h2>
-        <p>Developing intelligent solutions using AI & ML.</p>
-        <a href="https://www.geeksforgeeks.org/machine-learning-projects/" class="service-btn">Learn More</a>
-      </div>
-      <div class="service-item">
-        <h2>Full-Stack Development</h2>
-        <p>End-to-end development from frontend to backend.</p>
-        <a href="https://www.geeksforgeeks.org/best-full-stack-project-ideas/" class="service-btn">Learn More</a>
-      </div>
-      <div class="service-item">
-        <h2>UI/UX Design</h2>
-        <p>Creating seamless and visually appealing interfaces.</p>
-        <a href="https://www.behance.net/search/projects/free%20ux" class="service-btn">Learn More</a>
-      </div>
+        <label>Project URL
+          <input id="projUrl" name="url" type="url" placeholder="https://example.com" required>
+        </label>
+
+        <label>Image URL (link)
+          <input id="projImg" name="img" type="url" placeholder="https://...jpg (or use external image)" required>
+        </label>
+
+        <label>Description
+          <textarea id="projDesc" name="desc" rows="4" placeholder="Short description (1-2 sentences)" required></textarea>
+        </label>
+
+        <div class="modal-actions">
+          <button type="button" id="cancelBtn" class="btn btn-ghost">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Project</button>
+        </div>
+      </form>
     </div>
   </div>
-</section>
-<!-- End Services Section -->
 
-
-
-<!-- Projects Section -->
-<section id="projects">
-  <div class="projects container">
-    <div class="projects-header">
-      <h1 class="section-title">Recent <span>Projects</span></h1>
-    </div>
-    <div class="all-projects">
-      
-      <div class="project-item">
-        <div class="project-info">
-          <h1>
-            <a href="https://ai--content-generator.vercel.app/" target="_blank">AI Content Generator</a>
-          </h1>
-          <h2>Next.js, React, Tailwind CSS, Gemini API</h2>
-          <p>A web-based AI-powered content generator that helps users create high-quality text content effortlessly using Google's Gemini API. Features include text summarization, blog writing, and creative story generation.</p>
-        </div>
-        <div class="project-img">
-          <img src="https://img.freepik.com/free-vector/chatbot-customer-support-flat-concept-with-people-chatting-with-virtual-assistant-online-vector-illustration_98292-8656.jpg?t=st=1739978651~exp=1739982251~hmac=d81df91a5555096537c9f748a9ef0bb847f6732c035fe2ac5db8f869912f82ab&w=900" alt="AI Content Generator">
-        </div>
-      </div>
-
-      <div class="project-item">
-        <div class="project-info">
-          <h1>
-            <a href="https://loop-microsoft.vercel.app/" target="_blank">Microsoft Loop Clone</a>
-          </h1>
-          <h2>React, Next.js, Clerk Authentication</h2>
-          <p>A collaborative workspace application inspired by Microsoft Loop, allowing users to create and share dynamic pages, integrate with other tools, and collaborate in real time.</p>
-        </div>
-        <div class="project-img">
-          <img src="https://img.freepik.com/free-vector/media-player-software-computer-application-geolocation-app-location-determination-function-male-implementor-programmer-cartoon-character_335657-1180.jpg?t=st=1739978769~exp=1739982369~hmac=c29fb6d0bf79aeb63266f96bacdf8ad1e1544d35894741cd9c9f8b93eaa503b3&w=740" alt="Microsoft Loop Clone">
-        </div>
-      </div>
-
-      <div class="project-item">
-        <div class="project-info">
-          <h1>
-            <a href="https://real-time-chat-frontend-1.vercel.app/login" target="_blank">Real-time Chat Application</a>
-          </h1>
-          <h2>Node.js, Socket.io, Firebase</h2>
-          <p>A real-time chat application that enables seamless communication with features like group chats, media sharing, and push notifications.</p>
-        </div>
-        <div class="project-img">
-          <img src="https://img.freepik.com/premium-photo/customer-experiencereviewfeedback-concepthands-using-mobile-phone_12892-102.jpg?w=900" alt="Real-time Chat Application">
-        </div>
-      </div>
-
-      <div class="project-item">
-        <div class="project-info">
-          <h1>
-            <a href="https://github.com/ShreyaPandayy/ai-resume-builder" target="_blank">AI-Powered Resume Builder</a>
-          </h1>
-          <h2>Python, Flask, OpenAI API</h2>
-          <p>An intelligent resume builder that assists users in crafting professional resumes by providing AI-generated suggestions, formatting options, and downloadable templates.</p>
-        </div>
-        <div class="project-img">
-          <img src="https://img.freepik.com/premium-photo/person-holding-resume-front-laptop_31965-94858.jpg?w=1060" alt="AI-Powered Resume Builder">
-        </div>
-      </div>
-
-      <div class="project-item">
-        <div class="project-info">
-          <h1>
-            <a href="https://github.com/ShreyaPandayy/ai-image-captioning" target="_blank">AI-Based Image Captioning</a>
-          </h1>
-          <h2>Deep Learning, TensorFlow, Flask</h2>
-          <p>A deep learning-based web application that generates captions for images using a CNN-LSTM model. Users can upload images, and the model provides an accurate caption describing the content.</p>
-        </div>
-        <div class="project-img">
-          <img src="https://img.freepik.com/premium-photo/businessman-using-computer-generate-ai-chat-ai-data-analysis-data-online-network-artificial-intelligence_36325-5218.jpg?w=900" alt="AI-Based Image Captioning">
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- End Projects Section -->
-
-
-
-  <!-- About Section -->
-  <section id="about">
+  <!-- ABOUT -->
+  <section id="about" class="reveal">
     <div class="about container">
       <div class="col-left">
         <div class="about-img">
-          <img src="./img/img-2.png" alt="img">
+          <img src="./img/img-2.png" alt="About image">
         </div>
       </div>
+
       <div class="col-right">
-        <h1 class="section-title">About <span>me</span></h1>
-        <h2>Front End Developer|🚀 Software Engineer | Web Developer | AI & ML Enthusiast</h2>
-        <p>Hi, I’m Shreya Pandey, a Computer Science Engineering (AI) student passionate about software development, AI, and web technologies. With expertise in Python, Java, C++, Data Structures & Algorithms, SQL, and Machine Learning, I thrive on solving real-world challenges through innovative solutions.
-
-I have experience developing intelligent applications, scalable web platforms, and AI-driven systems. My achievements include winning the Institute Level Solving for India Hackathon organized by GeeksforGeeks in collaboration with Google Cloud and AMD and ranking in the top 5% of a Machine Learning Hackathon for my Real-time Chat Application.
-
-With strong skills in teamwork, leadership, and problem-solving, I am always eager to learn, build, and collaborate on impactful projects. Let’s connect and create something amazing!</p>
-        <a href="https://drive.google.com/file/d/1ryZjT3eifuJqGaslwtkegrxhlaauiWy_/view?usp=drive_link" class="cta">Download Resume</a>
+        <h2 class="section-title">About <span>me</span></h2>
+        <h3>Front-End Developer · Software Engineer · AI & ML Enthusiast</h3>
+        <p>Hi, I’m Shreya Pandey — a CSE (AI) student passionate about building beautiful, performant web apps and intelligent systems. I’ve worked on projects in full-stack, real-time systems, and ML-powered apps. I enjoy problem-solving, collaborating, and shipping products that help people.</p>
+        <a class="cta resume" href="https://drive.google.com/file/d/1ryZjT3eifuJqGaslwtkegrxhlaauiWy_/view?usp=drive_link" target="_blank" rel="noopener"><span>Download Resume</span></a>
       </div>
     </div>
   </section>
-  <!-- End About Section -->
 
-  <!-- Contact Section -->
+  <!-- CONTACT -->
   <section id="contact">
     <div class="contact container">
-      <div>
-        <h1 class="section-title">Contact <span>info</span></h1>
-      </div>
+      <h2 class="section-title">Contact <span>info</span></h2>
       <div class="contact-items">
         <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" alt="phone" /></div>
           <div class="contact-info">
             <h1>Phone</h1>
-            <h2>+91 8756421349</h2>
+            <h2><a href="tel:+918756421349">+91 8756421349</a></h2>
           </div>
         </div>
+
         <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" alt="mail" /></div>
           <div class="contact-info">
             <h1>Email</h1>
-            <h2>shreeyapandey456@gmail.com</h2>
-            <h2>shreyapandeygkp3@gmail.com</h2>
+            <h2><a href="mailto:shreeyapandey456@gmail.com">shreeyapandey456@gmail.com</a></h2>
           </div>
         </div>
+
         <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" /></div>
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" alt="location" /></div>
           <div class="contact-info">
-            <h1>Address</h1>
+            <h1>Location</h1>
             <h2>Lucknow, Uttar Pradesh, India</h2>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- End Contact Section -->
 
-  <!-- Footer -->
-<section id="footer">
-    <div class="footer container">
-        <div class="brand">
-            <h1><span>S</span>hreya <span>P</span>andey</h1>
-        </div>
-        <h2>Your Complete Web Solution</h2>
-        <div class="social-icon">
-            <div class="social-item">
-                <a href="https://www.linkedin.com/in/shryapandayy/" target="_blank">
-                    <img src="https://img.icons8.com/bubbles/100/000000/linkedin.png" alt="LinkedIn" />
-                </a>
-            </div>
-            <div class="social-item">
-                <a href="mailto:shreeyapandey456@gmail.com">
-                    <img src="https://img.icons8.com/bubbles/100/000000/gmail.png" alt="Email" />
-                </a>
-            </div>
-            <div class="social-item">
-                <a href="https://www.instagram.com/shryapandayy" target="_blank">
-                    <img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" alt="Instagram" />
-                </a>
-            </div>
-            <div class="social-item">
-                <a href="https://github.com/ShreyaPandayy" target="_blank">
-                    <img src="https://img.icons8.com/bubbles/100/000000/github.png" alt="GitHub" />
-                </a>
-            </div>
-            <div class="social-item">
-                <a href="https://wa.me/918756421349" target="_blank">
-                    <img src="https://img.icons8.com/bubbles/100/000000/whatsapp.png" alt="WhatsApp" />
-                </a>
-            </div>
-        </div>
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-inner container">
+      <div class="brand">
+        <h2>SHREYA PANDEY</h2>
+      </div>
+
+      <div class="footer-line"></div>
+
+      <div class="footer-social" role="navigation" aria-label="Social links">
+        <a class="social-item linkedin" href="https://www.linkedin.com/in/shryapandayy/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="https://img.icons8.com/bubbles/100/000000/linkedin.png" alt="LinkedIn"></a>
+        <a class="social-item email" href="mailto:shreeyapandey456@gmail.com" aria-label="Email"><img src="https://img.icons8.com/bubbles/100/000000/gmail.png" alt="Email"></a>
+        <a class="social-item instagram" href="https://www.instagram.com/shryapandayy" target="_blank" rel="noopener" aria-label="Instagram"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" alt="Instagram"></a>
+        <a class="social-item github" href="https://github.com/ShreyaPandayy" target="_blank" rel="noopener" aria-label="GitHub"><img src="https://img.icons8.com/bubbles/100/000000/github.png" alt="GitHub"></a>
+        <a class="social-item whatsapp" href="https://wa.me/918756421349" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="https://img.icons8.com/bubbles/100/000000/whatsapp.png" alt="WhatsApp"></a>
+      </div>
+
+      <div class="footer-meta">© 2025 • Built with ❤️ • Shreya Pandey</div>
     </div>
-</section>
+  </footer>
 
-
-
-      <p>Copyright © 2025 Shreya. All rights reserved</p>
-    </div>
-  </section>
-  <!-- End Footer -->
-  <script src="./app.js"></script>
+  <script src="app.js"></script>
 </body>
-
 </html>
